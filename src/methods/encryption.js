@@ -1,7 +1,10 @@
 const crypto = require('crypto');
 
 function encryption(body) {
-    const { data, publicKey } = body;
+    const {
+        data,
+        publicKey
+    } = body;
 
     const encryptedData = crypto.publicEncrypt({
             key: publicKey,
@@ -11,7 +14,9 @@ function encryption(body) {
         Buffer.from(data)
     )
 
-    return encryptedData.toString("base64");
+    return {
+        "encryptedData": encryptedData.toString("base64")
+    };
 }
 
 module.exports = encryption;

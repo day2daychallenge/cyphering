@@ -1,7 +1,11 @@
 const crypto = require('crypto');
 
 function decryption(body) {
-    const { encryptedData, privateKey, passphrase } = body;
+    const {
+        encryptedData,
+        privateKey,
+        passphrase
+    } = body;
 
     const decryptedData = crypto.privateDecrypt({
             key: privateKey,
@@ -11,7 +15,9 @@ function decryption(body) {
         },
         Buffer.from(encryptedData, "base64")
     )
-    return decryptedData.toString("utf8");
+    return {
+        "decryptedData": decryptedData.toString("utf8")
+    };
 }
 
 module.exports = decryption;

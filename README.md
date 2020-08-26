@@ -19,7 +19,7 @@ npm install cyphering  --save
 Then in your project:
 
 ```javascript
-const Cyphering = require('cyphering);
+const Cyphering = require('cyphering');
 ```
 
 ## Methods
@@ -97,7 +97,7 @@ The error codes are the standard error codes as returned by crypto library.
 ### Example
 
 ```javascript
-const Cyphering = require('cyphering);
+const Cyphering = require('cyphering');
 
 const passphrase = "my passphrase";
 

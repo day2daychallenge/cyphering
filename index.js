@@ -3,7 +3,7 @@ const cypheringMethods = require('./src/methods');
 class CypheringWrapper {
     constructor() {}
 
-    generatePublicAndPrivateKey() {
+    generatePublicAndPrivateKey(body) {
         return cypheringMethods.generatePublicNPrivateKeys(body);
     }
 

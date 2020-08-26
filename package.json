@@ -1,0 +1,29 @@
+{
+  "name": "cyphering",
+  "version": "1.0.0",
+  "description": "plug and play cyphering system for Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/day2daychallenge/cyphering.git"
+  },
+  "keywords": [
+    "cyphering",
+    "encryption",
+    "decryption",
+    "privateKeyGenerator",
+    "publicKeyGenerator"
+  ],
+  "author": "Amir Hatami Hardoroudi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/day2daychallenge/cyphering/issues"
+  },
+  "homepage": "https://github.com/day2daychallenge/cyphering#readme",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}

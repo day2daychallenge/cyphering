@@ -7,7 +7,11 @@ class CypheringWrapper {
         return cypheringMethods.generatePublicNPrivateKeys(body);
     }
 
-    encryption(body){
+    encryption(body) {
         return cypheringMethods.encryption(body);
+    }
+
+    decryption(body) {
+        return cypheringMethods.decryption(body);
     }
 }

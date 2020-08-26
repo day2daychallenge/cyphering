@@ -1,4 +1,4 @@
-const cypheringMethods = require('./src/methods');
+const cypheringMethods = require('./methods');
 
 class CypheringWrapper {
     constructor() {}

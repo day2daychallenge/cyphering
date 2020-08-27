@@ -7,17 +7,16 @@ function decryption(body) {
         passphrase
     } = body;
 
+    var bufferData = Buffer.from(encryptedData, "base64");
+
     const decryptedData = crypto.privateDecrypt({
-            key: privateKey,
-            padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
-            oaepHash: "sha256",
-            passphrase: passphrase,
-        },
-        Buffer.from(encryptedData, "base64")
-    )
-    return {
-        "decryptedData": decryptedData.toString("utf8")
-    };
+        key: privateKey,
+        oaepHash: "sha256",
+        passphrase: passphrase,
+        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING
+    }, bufferData);
+
+    return decryptedData.toString("utf8")
 }
 
 module.exports = decryption;

@@ -6,17 +6,17 @@ function encryption(body) {
         publicKey
     } = body;
 
+    var bufferData = new Buffer(data);
+
     const encryptedData = crypto.publicEncrypt({
             key: publicKey,
             padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
             oaepHash: "sha256",
         },
-        Buffer.from(data)
+        bufferData
     )
 
-    return {
-        "encryptedData": encryptedData.toString("base64")
-    };
+    return encryptedData.toString("base64");
 }
 
 module.exports = encryption;

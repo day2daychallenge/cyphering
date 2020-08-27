@@ -1,6 +1,6 @@
 {
   "name": "cyphering",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "plug and play cyphering system for Javascript",
   "main": "src/index.js",
   "scripts": {

@@ -5,5 +5,5 @@ const decryption = require('./decryption');
 module.exports = {
     generatePublicNPrivateKeys,
     encryption,
-    decryption
+    decryption,
 }

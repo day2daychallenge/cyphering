@@ -15,3 +15,5 @@ class CypheringWrapper {
         return cypheringMethods.decryption(body);
     }
 }
+
+module.exports = new CypheringWrapper();
